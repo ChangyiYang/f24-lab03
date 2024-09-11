@@ -17,6 +17,11 @@ public class InheritanceSortedIntList extends SortedIntList {
 
     private int addTrack = 0;
 
+    /**
+     * Add the given element to the list, return true if success.
+     * @param num an integer to be added to the list
+     * @return
+     */
     @Override
     public boolean add(int num) {
         boolean res = super.add(num);
