@@ -1,7 +1,6 @@
 package edu.cmu.cs.cs214.rec04;
 
 
-
 /**
  * InheritanceSortedIntList -- a variant of a SortedIntList that keeps
  * count of the number of attempted element insertions (not to be confused
@@ -9,7 +8,6 @@ package edu.cmu.cs.cs214.rec04;
  * and exports an accessor (totalAdded) for this count.
  *
  * @author Nora Shoemaker
- *
  */
 
 public class InheritanceSortedIntList extends SortedIntList {
@@ -19,13 +17,14 @@ public class InheritanceSortedIntList extends SortedIntList {
 
     /**
      * Add the given element to the list, return true if success.
+     *
      * @param num an integer to be added to the list
      * @return
      */
     @Override
     public boolean add(int num) {
         boolean res = super.add(num);
-        if(res) addTrack++;
+        if (res) addTrack++;
         return res;
     }
 
@@ -35,7 +34,7 @@ public class InheritanceSortedIntList extends SortedIntList {
     }
 
 
-    public int getTotalAdded(){
+    public int getTotalAdded() {
         return addTrack;
     }
 }
